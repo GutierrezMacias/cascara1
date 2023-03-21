@@ -9,21 +9,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       // Application name
-      title: 'Flutter Hello World',
+      title: 'pestana uno',
+      debugShowCheckedModeBanner: false,
       // Application theme data, you can set the colors for the application as
       // you want
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
       // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'mi primer vez en flutter'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  const MyHomePage({super.key, required this.title});  
+  const MyHomePage({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +32,23 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         // The title text which will be shown on the action bar
         title: Text(title),
+
+        actions: [
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.more_vert,
+            ),
+            onPressed: () {},
+          )
+        ],
       ),
       body: Center(
         child: Text(
-          'Hello, World!',
+          'Hola mundo cruel',
         ),
       ),
     );
